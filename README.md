@@ -6,6 +6,8 @@ To start the exercises and the Jupyter notebooks, push the "launch binder" butto
 
 Please also note:
 
+- Please avoid starting multiple binder instances (we have a max of 40!) and use the "Quit" button to close your notebooks.  
+
 - Solved exercises can be found in folder `notebooks/solutions`.
 
 - A static HTML version of all solved notebooks can be found in `notebooks/solutions/html`.
