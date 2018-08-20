@@ -33,6 +33,7 @@ library(metafor)
 inf_rb <- influence(res_rb)
 inf
 
+## Solution.
 ### plot the influence diagnostics
 plot(inf_rb)
 
