@@ -1,3 +1,1 @@
-pip install jupyter-contrib-nbextensions
-jupyter nbextension install https://rawgit.com/jfbercher/small_nbextensions/master/toc2.zip
-jupyter nbextension enable toc2/main
+jupyter contrib nbextension install --user
