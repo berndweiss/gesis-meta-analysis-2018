@@ -40,7 +40,7 @@ dat.bcg[dat.bcg$author == "Stein & Aronson", ]
 dat.bcg[dat.bcg$year >= 1970, ]
 
 ## Solution.
-dat.bcg_bf1970 <- dat.bcg[dat.bcg$year >= 1970, ]
+dat.bcg_bf1970 <- dat.bcg[dat.bcg$year < 1970, ]
 dim(dat.bcg_bf1970) ## number of rows/cases and number of columns
 nrow(dat.bcg_bf1970)
 
