@@ -33,6 +33,10 @@ dat.bcg <- escalc(measure = "OR", ai = tpos, bi = tneg, ci = cpos, di = cneg, da
 dat.bcg
 
 ## Solution.
+dat.bcg <- escalc(measure = "OR", ai = tpos, bi = tneg, ci = cpos, di = cneg, data = dat.bcg)
+exp(dat.bcg$yi)
+
+## Solution.
 "The first one, r = 0.234"
 
 ## Solution.

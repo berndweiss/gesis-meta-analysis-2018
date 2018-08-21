@@ -12277,6 +12277,21 @@ dat.bcg
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span class="o">=</span> <span class="s">&quot;OR&quot;</span><span class="p">,</span> ai <span class="o">=</span> tpos<span class="p">,</span> bi <span class="o">=</span> tneg<span class="p">,</span> ci <span class="o">=</span> cpos<span class="p">,</span> di <span class="o">=</span> cneg<span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">)</span>
+<span class="kp">exp</span><span class="p">(</span>dat.bcg<span class="o">$</span>yi<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
