@@ -4,6 +4,10 @@ To start the exercises and the Jupyter notebooks, push the "launch binder" butto
 
 [![Binder](https://notebooks.gesis.org/binder/badge.svg)](https://notebooks.gesis.org/binder/v2/gh/berndweiss/gesis-meta-analysis-2018/master)
 
+If the first link does not work, please use the following "launch binder" button.
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/berndweiss/gesis-meta-analysis-2018/master)
+
 Please also note:
 
 - Please avoid starting multiple binder instances (we have a max of 40!) and use the "Quit" button to close your notebooks.  
