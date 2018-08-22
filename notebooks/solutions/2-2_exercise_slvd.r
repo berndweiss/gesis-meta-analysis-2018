@@ -43,8 +43,31 @@ dat.bcg <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg, da
 ma.rem <- rma(yi = yi, vi = vi, method = "DL", data = dat.bcg)
 ma.rem
 
+## Solution.
+## Here is another ways to directly include the study outcomes without using escalc().
+library(metafor)
+rma.out <- rma(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg, method = "DL", 
+               data = dat.bcg)
+rma.out
+
+## Solution.
+
+## Since the average effect size is a log(RR), for interpretation and publication, we need to 
+## retransform it to the RR metric. 
+## Source: http://www.metafor-project.org/doku.php/tips:assembling_data_or
+predict(rma.out, transf = exp, digits = 2)
+
+## Solution. 
+
+## Another, more technical approach is to assign the result of the rma() command  
+## to an object called rma.out. We now can access all the results in rma.out, for instance, 
+## the the avergage effect size. The variable name of this average effect size is "b". 
+## Hence, we can use:
+exp(rma.out$b)
+## Use str(rma.out) to learn about other statistics that can be found in the rma object. 
+
 ## Solution according to http://www.metafor-project.org/doku.php/analyses:berkey1995.
-## IMPORTANT: Different method ("EB") applied! 
+## IMPORTANT: Different metehod ("EB") applied! 
 library(metafor)
 dat.bcg <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg, data = dat.bcg)
 dat.bcg$vi <- with(dat.bcg, sum(tneg/tpos)/(13*(tneg+tpos)) + 

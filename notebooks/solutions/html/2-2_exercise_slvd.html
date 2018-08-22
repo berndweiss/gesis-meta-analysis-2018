@@ -11807,33 +11807,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;run_me_first.R&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Loading required package: Matrix
-Loading &#39;metafor&#39; package (version 2.0-0). For an overview 
-and introduction to the package please type: help(metafor).
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -11866,7 +11846,7 @@ and introduction to the package please type: help(metafor).
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11908,7 +11888,7 @@ ma.fem
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11943,7 +11923,7 @@ var.ma.fem
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11978,7 +11958,7 @@ se.ma.fem
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12014,7 +11994,7 @@ ma.fem.ll
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12060,14 +12040,14 @@ ma.fem.ul
 <p>Of course, as you may already know, you do not have to estimate summary effects by hand. <code>metafor</code>'s <code>rma()</code> function can do that for you.</p>
 <p>For this exercise, you can apply the <code>rma()</code> function to replicate the results from exercise 1, i.e. estimate a fixed-effect summary. If you forgot how to apply the <code>?rma</code> function, check the metafor introduction slides and exercises. (Remember, you only need for now to know three arguments in the ?rma function: the effect-size argument <code>yi</code> , the variance argument <code>vi</code>, and the argument <code>method</code>. With the latter, you specify which effect-size model you want to apply.) Here, we need the fixed-effect model and therefore the argument is <code>method = "FE"</code>.</p>
 <p>Note: See the slides from the morning, the command that you need were used in the example, but be sure to
-use the method = "FE" for this exercise.</p>
+use the <code>method = "FE"</code> for this exercise.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12140,7 +12120,7 @@ between-study variance estimates and we introduced the method-of-moments estimat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12195,11 +12175,140 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+<span class="c1">## Here is another ways to directly include the study outcomes without using escalc().</span>
+<span class="kn">library</span><span class="p">(</span>metafor<span class="p">)</span>
+rma.out <span class="o">&lt;-</span> rma<span class="p">(</span>measure <span class="o">=</span> <span class="s">&quot;RR&quot;</span><span class="p">,</span> ai <span class="o">=</span> tpos<span class="p">,</span> bi <span class="o">=</span> tneg<span class="p">,</span> ci <span class="o">=</span> cpos<span class="p">,</span> di <span class="o">=</span> cneg<span class="p">,</span> method <span class="o">=</span> <span class="s">&quot;DL&quot;</span><span class="p">,</span> 
+               data <span class="o">=</span> dat.bcg<span class="p">)</span>
+rma.out
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+Random-Effects Model (k = 13; tau^2 estimator: DL)
+
+tau^2 (estimated amount of total heterogeneity): 0.3088 (SE = 0.2299)
+tau (square root of estimated tau^2 value):      0.5557
+I^2 (total heterogeneity / total variability):   92.12%
+H^2 (total variability / sampling variability):  12.69
+
+Test for Heterogeneity: 
+Q(df = 12) = 152.2330, p-val &lt; .0001
+
+Model Results:
+
+estimate      se     zval    pval    ci.lb    ci.ub     
+ -0.7141  0.1787  -3.9952  &lt;.0001  -1.0644  -0.3638  ***
+
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre> pred ci.lb ci.ub cr.lb cr.ub
+ 0.49  0.34  0.70  0.16  1.54</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+
+<span class="c1">## Since the average effect size is a log(RR), for interpretation and publication, we need to </span>
+<span class="c1">## retransform it to the RR metric. </span>
+<span class="c1">## Source: http://www.metafor-project.org/doku.php/tips:assembling_data_or</span>
+predict<span class="p">(</span>rma.out<span class="p">,</span> transf <span class="o">=</span> <span class="kp">exp</span><span class="p">,</span> digits <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre> pred ci.lb ci.ub cr.lb cr.ub
+ 0.49  0.34  0.70  0.16  1.54</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution. </span>
+
+<span class="c1">## Another, more technical approach is to assign the result of the rma() command  </span>
+<span class="c1">## to an object called rma.out. We now can access all the results in rma.out, for instance, </span>
+<span class="c1">## the the avergage effect size. The variable name of this average effect size is &quot;b&quot;. </span>
+<span class="c1">## Hence, we can use:</span>
+<span class="kp">exp</span><span class="p">(</span>rma.out<span class="o">$</span>b<span class="p">)</span>
+<span class="c1">## Use str(rma.out) to learn about other statistics that can be found in the rma object.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution according to http://www.metafor-project.org/doku.php/analyses:berkey1995.</span>
-<span class="c1">## IMPORTANT: Different method (&quot;EB&quot;) applied! </span>
+<span class="c1">## IMPORTANT: Different metehod (&quot;EB&quot;) applied! </span>
 <span class="kn">library</span><span class="p">(</span>metafor<span class="p">)</span>
 dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span class="o">=</span> <span class="s">&quot;RR&quot;</span><span class="p">,</span> ai <span class="o">=</span> tpos<span class="p">,</span> bi <span class="o">=</span> tneg<span class="p">,</span> ci <span class="o">=</span> cpos<span class="p">,</span> di <span class="o">=</span> cneg<span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">)</span>
 dat.bcg<span class="o">$</span>vi <span class="o">&lt;-</span> <span class="kp">with</span><span class="p">(</span>dat.bcg<span class="p">,</span> <span class="kp">sum</span><span class="p">(</span>tneg<span class="o">/</span>tpos<span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">13</span><span class="o">*</span><span class="p">(</span>tneg<span class="o">+</span>tpos<span class="p">))</span> <span class="o">+</span> 
@@ -12221,29 +12330,16 @@ ma.rem
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Loading required package: Matrix
-Loading &#39;metafor&#39; package (version 2.0-0). For an overview 
-and introduction to the package please type: help(metafor).
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
 
 
 <div class="output_text output_subarea ">
 <pre>
-Random-Effects Model (k = 13; tau^2 estimator: DL)
+Random-Effects Model (k = 13; tau^2 estimator: EB)
 
-tau^2 (estimated amount of total heterogeneity): 0.2361 (SE = 0.1902)
-tau (square root of estimated tau^2 value):      0.4859
-I^2 (total heterogeneity / total variability):   86.02%
-H^2 (total variability / sampling variability):  7.16
+tau^2 (estimated amount of total heterogeneity): 0.2682 (SE = 0.1801)
+tau (square root of estimated tau^2 value):      0.5178
+I^2 (total heterogeneity / total variability):   87.49%
+H^2 (total variability / sampling variability):  7.99
 
 Test for Heterogeneity: 
 Q(df = 12) = 85.8625, p-val &lt; .0001
@@ -12251,7 +12347,7 @@ Q(df = 12) = 85.8625, p-val &lt; .0001
 Model Results:
 
 estimate      se     zval    pval    ci.lb    ci.ub    
- -0.5344  0.1755  -3.0457  0.0023  -0.8783  -0.1905  **
+ -0.5429  0.1842  -2.9474  0.0032  -0.9040  -0.1819  **
 
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
@@ -12285,7 +12381,7 @@ the $\tau^2_{DL}$. Formulas are provided in our slides.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12323,7 +12419,7 @@ Q.T
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12359,7 +12455,7 @@ tau2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12395,7 +12491,7 @@ ma.rem
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12430,7 +12526,7 @@ se.ma.rem
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>

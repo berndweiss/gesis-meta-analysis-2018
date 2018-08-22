@@ -11807,13 +11807,33 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;run_me_first.R&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Loading required package: Matrix
+Loading &#39;metafor&#39; package (version 2.0-0). For an overview 
+and introduction to the package please type: help(metafor).
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -11958,7 +11978,7 @@ alloc	character	method of treatment allocation (random, alternate, or systematic
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11990,7 +12010,7 @@ dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12050,7 +12070,7 @@ dat.bcg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>dat.bcg<span class="p">)</span>
@@ -12110,7 +12130,7 @@ dat.bcg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12144,7 +12164,7 @@ dat.bcg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12209,7 +12229,7 @@ dat.bcg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12279,7 +12299,7 @@ dat.bcg
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12288,6 +12308,40 @@ dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>0.391138273491215</li>
+	<li>0.188965517241379</li>
+	<li>0.25</li>
+	<li>0.233063682033097</li>
+	<li>0.803208388961182</li>
+	<li>0.383612618804959</li>
+	<li>0.195191170674024</li>
+	<li>1.01209313924027</li>
+	<li>0.623911944072587</li>
+	<li>0.24629872775841</li>
+	<li>0.711165826534675</li>
+	<li>1.56304318759192</li>
+	<li>0.98280763088786</li>
+</ol>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12337,10 +12391,12 @@ dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+<span class="c1">## We are interested in verbal abilities and the other two correlation coefficient </span>
+<span class="c1">## refer to other subscales/subsets. </span>
 <span class="s">&quot;The first one, r = 0.234&quot;</span>
 </pre></div>
 
@@ -12387,12 +12443,12 @@ dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
 <span class="c1">## Perform a Fisher&#39;s z transformation on r for the most general measures,</span>
-<span class="c1">## i.e no subtests</span>
+
 r <span class="o">&lt;-</span> <span class="m">0.234</span>
 n <span class="o">&lt;-</span> <span class="m">76</span>
 z.r <span class="o">&lt;-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="kp">log</span><span class="p">((</span><span class="m">1</span> <span class="o">+</span> r<span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">1</span> <span class="o">-</span> r<span class="p">))</span>
@@ -12425,7 +12481,7 @@ z.r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12459,7 +12515,7 @@ var.z.r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12492,7 +12548,7 @@ var.z.r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>

@@ -37,11 +37,13 @@ dat.bcg <- escalc(measure = "OR", ai = tpos, bi = tneg, ci = cpos, di = cneg, da
 exp(dat.bcg$yi)
 
 ## Solution.
+## We are interested in verbal abilities and the other two correlation coefficient 
+## refer to other subscales/subsets. 
 "The first one, r = 0.234"
 
 ## Solution.
 ## Perform a Fisher's z transformation on r for the most general measures,
-## i.e no subtests
+
 r <- 0.234
 n <- 76
 z.r <- 0.5 * log((1 + r)/(1 - r))
