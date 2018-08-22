@@ -57,6 +57,11 @@ var.z.r
 (se.z.r <- sqrt(var.z.r)) ## (...) is a shortcut for print(...)
 
 ## Solution.
+## You also can use escalc() to calculate the Fisher's r-to-z transformed correlation 
+## coefficient.
+escalc(measure="ZCOR", ri = 0.234, ni = 76)
+
+## Solution.
 ## Here is the variance and SE for the raw correlation coefficient
 (var.r <- (1-r^2)^2/(n-1))
 sqrt(var.r)
