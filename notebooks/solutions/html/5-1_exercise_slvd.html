@@ -15733,7 +15733,8 @@ SOwAAAAUQWIHAACgCBI7AAAARfwfRFGIZGdgpIcAAAAASUVORK5CYII="
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Investigate the impact of study year (<code>year</code>) on the effect sizes. Create a scatterplot effect size by year.</p>
+<p>Investigate the impact of study year (<code>year</code>) on the effect sizes by estimating a simple meta-regression model. Create a scatterplot effect size by year.</p>
+<p>Note: Since this dataset contains dependent effect sizes, this is not the recommended approach. See the section on multilevel meta-analysis for a more appropriate approach.</p>
 
 </div>
 </div>
@@ -19415,6 +19416,72 @@ YAcAACAJgh0AAIAkCHYAAACSINgBAABIgmAHAAAgCYIdAACAJAh2AAAAkiDYAQAASIJgBwAA
 IAmCHQAAgCQIdgAAAJIg2AEAAEiCYAcAACAJgh0AAIAkCHYAAACSINgBAABIgmAHAAAgCYId
 AACAJAh2AAAAkiDYAQAASIJgBwAAIIn/B4fVfAdIYVJtAAAAAElFTkSuQmCC"
 >
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, we can estimate a multilevel meta-regression model by including <code>year</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+<span class="p">(</span>rma_ml <span class="o">&lt;-</span> rma.mv<span class="p">(</span>yi <span class="o">~</span> year<span class="p">,</span> vi<span class="p">,</span> random <span class="o">=</span> <span class="o">~</span> <span class="m">1</span> <span class="o">|</span> district<span class="o">/</span>study<span class="p">,</span> data <span class="o">=</span> dk<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+Multivariate Meta-Analysis Model (k = 56; method: REML)
+
+Variance Components: 
+
+            estim    sqrt  nlvls  fixed          factor
+sigma^2.1  0.0723  0.2688     11     no        district
+sigma^2.2  0.0327  0.1807     56     no  district/study
+
+Test for Residual Heterogeneity: 
+QE(df = 54) = 550.2597, p-val &lt; .0001
+
+Test of Moderators (coefficient(s) 2): 
+QM(df = 1) = 0.3169, p-val = 0.5735
+
+Model Results:
+
+         estimate       se     zval    pval     ci.lb    ci.ub   
+intrcpt  -10.3898  18.7848  -0.5531  0.5802  -47.2074  26.4278   
+year       0.0053   0.0094   0.5629  0.5735   -0.0132   0.0238   
+
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+</pre>
 </div>
 
 </div>
