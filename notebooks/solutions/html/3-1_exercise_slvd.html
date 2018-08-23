@@ -12540,14 +12540,14 @@ dat.bcg_byyear<span class="o">$</span>author_year <span class="o">&lt;-</span> <
 dat.bcg_byyear<span class="o">$</span>year<span class="p">)</span>
 <span class="kp">with</span><span class="p">(</span>dat.bcg_byyear<span class="p">,</span>
 forest<span class="p">(</span>x <span class="o">=</span> yi<span class="p">,</span> vi <span class="o">=</span> vi<span class="p">,</span> slab <span class="o">=</span> author_year<span class="p">,</span> ylim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-2</span><span class="p">,</span> <span class="m">16</span><span class="p">),</span>
-       xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-8</span><span class="p">,</span> <span class="m">5.5</span><span class="p">),</span> xlab <span class="o">=</span> <span class="s">&quot;Effect size log(OR)&quot;</span><span class="p">))</span>
+       xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-8</span><span class="p">,</span> <span class="m">5.5</span><span class="p">),</span> xlab <span class="o">=</span> <span class="s">&quot;Effect size log(RR)&quot;</span><span class="p">))</span>
 <span class="c1">## Add FE and RE model estimates (you have to add space manually via</span>
 <span class="c1">## ylim = c(-2,22))</span>
 addpoly<span class="p">(</span>ma.fem<span class="p">,</span> row <span class="o">=</span> <span class="m">-1</span><span class="p">)</span>
 addpoly<span class="p">(</span>ma.rem<span class="p">,</span> row <span class="o">=</span> <span class="m">-2</span><span class="p">)</span>
 <span class="c1">### Add column headings</span>
 text<span class="p">(</span><span class="m">-7</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="s">&quot;Study&quot;</span><span class="p">)</span>
-text<span class="p">(</span><span class="m">2.5</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="s">&quot;log(OR)&quot;</span><span class="p">)</span>
+text<span class="p">(</span><span class="m">2.5</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="s">&quot;log(RR)&quot;</span><span class="p">)</span>
 text<span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="s">&quot;95% CI&quot;</span><span class="p">)</span>
 </pre></div>
 
