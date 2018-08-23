@@ -13,6 +13,9 @@ dat.bcg <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg, da
 res.abl <- (rma(yi ~ ablat, vi, data = dat.bcg, digits = 3) )
 res.abl
 
+forest(res.abl)
+dat.bcg
+
 ## Solution.
 ## This moderator has negative, statistically significant effect. That is, the colder 
 ## (more north or south,  it is the absolute value), the better the vaccine works. 
@@ -46,3 +49,10 @@ summary(mdl_grouped)
 ## Solution.
 mdl3_grouped <- rma(yi ~ ablat_gr - 1, vi, data = dat.bcg, digits = 3)
 summary(mdl3_grouped)
+
+
+
+## - a negative value means that the vaccine indeed works.
+## - 0 means there is no effect at all, yi > 0 means the vaccine is harmful.
+###  - vaccine works better in cntries for lattitudes bw. 34 and 90 
+

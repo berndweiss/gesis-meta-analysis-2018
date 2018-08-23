@@ -12417,8 +12417,7 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>install.packages<span class="p">(</span><span class="s">&quot;car&quot;</span><span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
 dat.bcg<span class="o">$</span>ablat_gr <span class="o">&lt;-</span> recode<span class="p">(</span>dat.bcg<span class="o">$</span>ablat<span class="p">,</span> <span class="s">&quot;0:33 = &#39;[0,34)&#39;; 24:90 = &#39;[34,90)&#39;&quot;</span><span class="p">)</span>
 dat.bcg<span class="o">$</span>ablat_gr <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span>dat.bcg<span class="o">$</span>ablat_gr<span class="p">)</span>
 <span class="kp">table</span><span class="p">(</span>dat.bcg<span class="o">$</span>ablat_gr<span class="p">)</span>
