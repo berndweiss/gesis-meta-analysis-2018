@@ -11784,7 +11784,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Preliminaries" data-toc-modified-id="Preliminaries-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Preliminaries</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise-()*" data-toc-modified-id="Exercise-()*-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Exercise ()*</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Exercise</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Preliminaries" data-toc-modified-id="Preliminaries-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Preliminaries</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Exercise</a></span></li><li><span><a href="#Exercise*" data-toc-modified-id="Exercise*-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Exercise*</a></span></li><li><span><a href="#Exercise" data-toc-modified-id="Exercise-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Exercise</a></span></li></ul></div>
 </div>
 </div>
 </div>
@@ -11807,7 +11807,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## source(&quot;run_me_first.R&quot;)</span>
@@ -11846,14 +11846,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
 <span class="kn">library</span><span class="p">(</span>metafor<span class="p">)</span>
 dat.bcg <span class="o">&lt;-</span> escalc<span class="p">(</span>measure <span class="o">=</span> <span class="s">&quot;RR&quot;</span><span class="p">,</span> ai <span class="o">=</span> tpos<span class="p">,</span> bi <span class="o">=</span> tneg<span class="p">,</span> ci <span class="o">=</span> cpos<span class="p">,</span> di <span class="o">=</span> cneg<span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">)</span>
 res.fem <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="o">=</span> yi<span class="p">,</span> vi <span class="o">=</span> vi<span class="p">,</span> method <span class="o">=</span> <span class="s">&quot;FE&quot;</span><span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">)</span>
-funnel<span class="p">(</span>res.fem<span class="p">,</span> xlab <span class="o">=</span> <span class="s">&quot;log(OR)&quot;</span><span class="p">)</span>
+funnel<span class="p">(</span>res.fem<span class="p">,</span> xlab <span class="o">=</span> <span class="s">&quot;log(RR)&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12659,7 +12659,7 @@ test for funnel plot asymmetry: t = -1.4013, df = 11, p = 0.1887
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Calculate the SND and the precision</span>
@@ -12715,7 +12715,7 @@ F-statistic: 0.7526 on 1 and 11 DF,  p-value: 0.4042
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## To add confidence lines to the plot, we are using the</span>
@@ -12733,7 +12733,7 @@ interval<span class="o">=</span><span class="s">&quot;confidence&quot;</span><sp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Then, create the plot</span>
@@ -13392,7 +13392,7 @@ gE1Q7AAAAGyCYgcAAGATFDsAAACb+P94dkWlHhbK0AAAAABJRU5ErkJggg=="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -13408,11 +13408,12 @@ res.rem <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
 res.fem <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="o">=</span> yi<span class="p">,</span> vi <span class="o">=</span> vi<span class="p">,</span> method <span class="o">=</span> <span class="s">&quot;FE&quot;</span><span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">)</span>
+res.rem
 <span class="p">(</span>res.fem.trimfill1 <span class="o">&lt;-</span> trimfill<span class="p">(</span>res.fem<span class="p">))</span>
 </pre></div>
 
@@ -13423,6 +13424,37 @@ res.fem <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+Random-Effects Model (k = 13; tau^2 estimator: REML)
+
+tau^2 (estimated amount of total heterogeneity): 0.3132 (SE = 0.1664)
+tau (square root of estimated tau^2 value):      0.5597
+I^2 (total heterogeneity / total variability):   92.22%
+H^2 (total variability / sampling variability):  12.86
+
+Test for Heterogeneity: 
+Q(df = 12) = 152.2330, p-val &lt; .0001
+
+Model Results:
+
+estimate      se     zval    pval    ci.lb    ci.ub     
+ -0.7145  0.1798  -3.9744  &lt;.0001  -1.0669  -0.3622  ***
+
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+</pre>
+</div>
+
+</div>
 
 <div class="output_area">
 
@@ -13458,7 +13490,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>

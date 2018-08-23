@@ -11807,7 +11807,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;run_me_first.R&quot;</span><span class="p">)</span>
@@ -11847,7 +11847,7 @@ heterogeneity.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11913,7 +11913,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In a next step we are wondering if the moderator variable <code>ablat</code> can explain heterogeneity in the effect size
-distribution. <code>ablat</code> denotes the absolute latitude. The effect of latitude on the vaccine can be assumed as follows:</p>
+distribution. <code>ablat</code> denotes the absolute <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">latitude</a> (Wikipedia article). The effect of latitude on the vaccine can be assumed as follows:</p>
 <blockquote><p>"Latitude accounts for variation in rainfall, humidity, environmental mycobacteria that may produce natural immunity, temperature, and other factors that may have biological implications for vaccine efficacy. Preparation of the live vaccine requires refrigeration; unrefrigerated, it would spoil more quickly in warmer temperatures. Furthermore, direct
 exposure of the vaccine to sunlight may reduce counts of live bacteria" (Berkey et al. 1995: 396).</p>
 </blockquote>
@@ -11927,7 +11927,7 @@ interpretation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -11987,15 +11987,51 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
+<span class="c1">## This moderator has negative, statistically significant effect. That is, the colder </span>
+<span class="c1">## (more north or south,  it is the absolute value), the better the vaccine works. </span>
+<span class="c1">## At 0° (intercept), the effect is positive ($b_0 = 0.251$)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
-<span class="c1">## This moderator has negative, statistically significant effect. That is, the colder (more north or south, </span>
-<span class="c1">## it is the absolute value), the better the vaccine works. At 0° (intercept), the effect is positive ($b_0 = 0.301$)</span>
+<span class="c1">## The value for R^2 (&quot;R^2 (amount of heterogeneity accounted for):&quot;) can be manually </span>
+<span class="c1">## calculated as follows:</span>
+<span class="p">(</span>fit.0<span class="o">$</span>tau2 <span class="o">-</span> res.abl<span class="o">$</span>tau2 <span class="p">)</span><span class="o">/</span> fit.0<span class="o">$</span>tau2
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+0.756244783614905
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12023,7 +12059,7 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">table</span><span class="p">(</span>dat.bcg<span class="o">$</span>ablat<span class="p">)</span>
@@ -12058,7 +12094,7 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
@@ -12116,7 +12152,7 @@ dat.bcg<span class="o">$</span>ablat_gr <span class="o">&lt;-</span> <span class
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -12186,7 +12222,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>mdl_grouped <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="o">~</span> relevel<span class="p">(</span>ablat_gr<span class="p">,</span> ref <span class="o">=</span> <span class="s">&quot;[34,90)&quot;</span><span class="p">),</span> vi<span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">,</span> digits <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -12258,7 +12294,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>dat.bcg<span class="o">$</span>ablat_gr2 <span class="o">&lt;-</span> relevel<span class="p">(</span>dat.bcg<span class="o">$</span>ablat_gr<span class="p">,</span> ref <span class="o">=</span> <span class="s">&quot;[34,90)&quot;</span><span class="p">)</span>
@@ -12302,7 +12338,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>mdl_grouped <span class="o">&lt;-</span> rma<span class="p">(</span>yi <span class="o">~</span> ablat_gr2<span class="p">,</span> vi<span class="p">,</span> data <span class="o">=</span> dat.bcg<span class="p">,</span> digits <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -12381,7 +12417,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>

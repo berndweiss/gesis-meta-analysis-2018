@@ -5,7 +5,7 @@
 library(metafor)
 dat.bcg <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg, data = dat.bcg)
 res.fem <- rma(yi = yi, vi = vi, method = "FE", data = dat.bcg)
-funnel(res.fem, xlab = "log(OR)")
+funnel(res.fem, xlab = "log(RR)")
 
 ## Solution.
 library(metafor)
@@ -47,6 +47,7 @@ res.rem <- rma(yi = yi, vi = vi, method = "REML", data = dat.bcg)
 
 ## Solution.
 res.fem <- rma(yi = yi, vi = vi, method = "FE", data = dat.bcg)
+res.rem
 (res.fem.trimfill1 <- trimfill(res.fem))
 
 ## Solution.
