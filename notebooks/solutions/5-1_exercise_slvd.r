@@ -18,10 +18,10 @@ hist(dk$yi)
 forest(dk_rma)
 
 ## Solution.
-(dk_rma_ordered <- rma(yi, vi, method = "REML", data = dk[order(dk$yi), ]))
+(dk_rma_ordered <- rma(yi, vi, method = "REML", data = dk))
 
 ## Solution.
-forest(dk_rma_ordered)
+forest(dk_rma_ordered, order = "obs")
 
 ## Solution.
 dk_fem <- rma(yi = yi, vi = vi, method = "FE", data = dk)
@@ -50,6 +50,9 @@ plot(influence(dk_rma))
 
 ## Solution.
 (rma_ml <- rma.mv(yi, vi, random = ~ 1 | district/study, data = dk))
+
+## Solution.
+round(rma_ml$sigma2[1] / sum(rma_ml$sigma2), 3)
 
 ## Solution.
 profile(rma_ml, progbar = FALSE)
